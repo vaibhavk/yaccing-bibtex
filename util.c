@@ -27,8 +27,8 @@ void entry_show(Entry entry)
     char *null = "NULL";
 
     printf("\n");
-    printf("bibtype\t: %s\n", entry.name);
-    printf("bibkey\t: %s\n", entry.key);
+    printf("\\usepackage{cite}\n");
+    printf("%cbibtype{%s}\n",'\\', entry.name);
 
     for (int i = 0; fields[i] != NULL; ++i) {
         for (int j = 0; j < size; ++j) {
@@ -39,7 +39,9 @@ void entry_show(Entry entry)
                 value = null;
             }
         }
-        printf("%s\t: %s\n", fields[i], value);
+        if(strcmp(value,null))
+            printf("%c%s{ %s }\n",'\\',fields[i], value);
     }
+    printf("%ccite{%s}\n",'\\',entry.key);
     printf("\n");
 }
