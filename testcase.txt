@@ -1,0 +1,22 @@
+
+@book{ourbook,
+author = {joe smith and john Kurt},
+title = {Our Little Book},
+year = {1997},
+name = {}
+}
+
+@article{key1,
+author = {Sarkar, Santonu},
+title = John Smith
+}
+
+@Book{abramowitz+stegun,
+ author    = "Milton Abramowitz and Irene A. Stegun",
+ title     = "Handbook of Mathematical Functions with
+              Formulas, Graphs, and Mathematical Tables",
+ publisher = "Dover",
+ year      =  1964,
+ address   = "New York City",
+ edition   = "ninth Dover printing, tenth GPO printing"
+}
